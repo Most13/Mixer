@@ -1,0 +1,52 @@
+<div class="player d-flex flex-column justify-content-end">
+    <div>
+
+    </div>
+    <div class="player-bar p-3 d-flex justify-content-between">
+
+        <div class="player-bar-controller d-flex align-items-center">
+            <fa-icon 
+            class="control-btn mr-3"
+            [icon]="['fas', 'step-backward']" ></fa-icon>
+            
+             <fa-icon 
+             class="control-btn play "
+             [icon]="faPlay" 
+             (click)="toggleAudio()"></fa-icon>
+
+             <fa-icon 
+              class="control-btn ml-3"
+              [icon]="['fas', 'step-forward']" 
+              ></fa-icon>
+        </div>
+
+       <div class="player-bar-track-info">
+           <div *ngIf="tracks.length > 0">
+                <div *ngFor="let item of tracks; index as index; " class="d-flex">
+                    <div>
+                        <img src="{{item.picture}}" alt="">
+                    </div>
+
+                    <div>
+                        <span class="d-block title track-name" >{{item.title}}</span>
+                        <div class="d-flex align-items-center">
+                            <span class="title info">{{item.artist}}</span>
+                            <span class="title info">{{item.album}}</span>
+                            <span class="title">{{item.year}}</span>
+                        </div>
+                    </div>
+                    
+                </div>
+           </div>
+      
+            <div>
+        
+            </div>
+       </div>
+
+        <div class="player-bar-spec-controls">
+
+        </div> 
+
+    </div>
+</div>

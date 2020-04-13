@@ -1,0 +1,15 @@
+
+.container{
+    &-main{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &-body{
+        flex: 1 1 auto;
+        background-color: #323639;
+    }
+}
+.sidebar{
+    width: 20%;
+}

@@ -1,0 +1,21 @@
+
+<div class="container-upload ">
+    <div class="d-flex justify-content-center align-items-center flex-wrap p-3">
+        <label class="file">
+                Drop a file or click to select one
+                <input type="file" 
+                (change)="onUpload($event.target)">
+        </label>
+
+
+        <div  class="example-list" *ngIf="Tracks.length > 0">
+            <div class="example-box" *ngFor="let item of Tracks">
+                <span class="d-block">{{item.artist}}</span>
+                <span class="d-block">{{item.title}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+        <a class="d-block" routerLink="/track-controller" routerLinkActive="active" *ngIf="Tracks.length>0">Go to Mixer</a>
+    </div>
+</div>

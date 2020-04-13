@@ -1,0 +1,38 @@
+.player{
+    height: 100%;
+    &-bar{
+        background-color: #1d1d1d;
+        &-track-info{
+            .title{
+                color: #fff;
+                font-size: 14px;
+                line-height: 16px;
+                &.track-name{
+                    font-weight: 500;
+                }
+                &.info{
+                    &:after{
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-color: #fff;
+                        margin: 0px 6px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.control-btn{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    &.play{
+        font-size: 26px;
+    }
+}
